@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculatrice Scientifique</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <div class="container mt-4 calculator">
+        <div class="ecran">
+            <div class="row">
+                <div class="col">
+                    <input type="text" id="ecran1" readonly>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <input type="text" id="ecran2" readonly>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <button type="button" class="btn blue " onclick="effacer()">CE</button>
+            <button type="button" class="btn blue" onclick="effacerDernier()">>x</button>
+            <button type="button" class="btn blue" onclick="carre()"><i>x <sup>2</sup></i></button>
+            <button type="button" class="btn blue" onclick="inverse()"><i>1/x</i></button>
+            <button type="button" class="btn blue" onclick="exp()">exp</button>
+            <button type="button" class="btn blue" onclick="afficherOperateur('%')">mod</button>
+            <button type="button" class="btn blue" onclick="racineCarree()"><i>sqrt(x)</i></button>
+            <button type="button" class="btn blue" onclick="afficherEcran1('(')">(</button>
+            <button type="button" class="btn blue" onclick="afficherEcran1(')')">)</button>
+            <button type="button" class="btn blue" onclick="factorielle()"><i>n!</i></button>
+            <button type="button" class="btn blue" onclick="afficherOperateur('/')">/</button>
+        </div>
+        <div class="row">
+            <button type="button" class="btn black" onclick="afficherEcran1('7')">7</button>
+            <button type="button" class="btn black" onclick="afficherEcran1('8')">8</button>
+            <button type="button" class="btn black" onclick="afficherEcran1('9')">9</button>
+            <button type="button" class="btn blue" onclick="afficherOperateur('*')">*</button>
+            <button type="button" class="btn blue" onclick="PuissanceDe10()">10 <sup><i>x</i></sup></button>
+        </div>
+        <div class="row">
+            <button type="button" class="btn black" onclick="afficherEcran1('4')">4</button>
+            <button type="button" class="btn black" onclick="afficherEcran1('5')">5</button>
+            <button type="button" class="btn black" onclick="afficherEcran1('6')">6</button>
+            <button type="button" class="btn blue" onclick="afficherOperateur('-')">-</button>
+            <button type="button" class="btn blue" onclick="log()">log</button>
+        </div>
+        <div class="row">
+            <button type="button" class="btn black" onclick="afficherEcran1('1')">1</button>
+            <button type="button" class="btn black" onclick="afficherEcran1('2')">2</button>
+            <button type="button" class="btn black" onclick="afficherEcran1('3')">3</button>
+            <button type="button" class="btn blue" onclick="afficherOperateur('+')">+</button>
+            <button type="button" class="btn blue" onclick="ln()">ln</button>
+        </div>
+        <div class="row">
+            <button type="button" class="btn black" onclick="afficherEcran1('0')">0</button>
+            <button type="button" class="btn blue" onclick="afficherEcran1('.')">.</button>
+            <button type="button" class="btn blue" onclick="calculerResultat()">=</button>
+        </div>
+    </div>
+    <div id="historique" class="container mt-4">
+        <h6>Historique</h6>
+        <ul id="listeHistorique"></ul>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>
